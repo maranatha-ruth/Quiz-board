@@ -15,3 +15,8 @@ this quiz-board project is about to create a project that allows the user to ans
 install google chrome
 text editor
 script
+```
+### copyright and license information
+```
+MT copyright 2018
+```
