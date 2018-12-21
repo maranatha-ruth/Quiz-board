@@ -1,29 +1,24 @@
-function mytest()
-{
-var question1=document.forms["myform"]["c1"].value;
-var question2=document.forms["myform"]["c2"].value;
-var question3=document.forms["myform"]["c3"].value;
-var question4=document.forms["myform"]["c4"].value;
-
-var marks=0;
-if(question1=="forEach")
-{
-  marks=marks+10;
-  }
-if(question2=="toUpperCase")
-{
-  marks=marks+10;
-  }
-if(question3=="concat")
-{
-  marks=marks+10;
-}
-if(question4=="window.print")
-{
-  marks=marks+10;
-}
-
-alert("your score is:"+marks);
-}
-
-<form name="myform"></form>
+var testResults = function(one, two ,three,four){
+    return one + two + three+four;
+    
+    
+    }
+    
+    $(document).ready(function(){
+      $(".begin").click(function(){
+        $("#test").fadeToggle("slow");
+      });
+    
+      $("form#test").submit(function(event){
+        var Q1 = parseInt($("input:radio[name=question1]:checked").val());
+        var Q2 = parseInt($("input:radio[name=question2]:checked").val());
+        var Q3 = parseInt($("input:radio[name=question3]:checked").val());
+        var Q4 = parseInt($("input:radio[name=question4]:checked").val());
+    
+        var result = testResults(Q1, Q2 ,Q3);
+    
+        $("#display").text("Your score is:" + result);
+    
+        event.preventDefault();
+        $(".final").show();
+    
