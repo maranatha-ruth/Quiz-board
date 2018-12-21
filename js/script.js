@@ -1,39 +1,37 @@
-var testResults = function(one, two ,three,four){
-    return one + two + three+ four;
-    
-    
-    }
-    
-    $(document).ready(function(){
-      $(".begin").click(function(){
-        $("#test").fadeToggle("slow");
-      });
-    
-      $("form#test").submit(function(event){
-        var Q1 = parseInt($("input:radio[name=question one]:checked").val());
-        var Q2 = parseInt($("input:radio[name=question one]:checked").val());
-        var Q3 = parseInt($("input:radio[name=question three]:checked").val());
-        var Q4 = parseInt($("input:radio[name=question four]:checked").val());
-         
-        var score =0;
-        
-        if (questionone===+10){
-            score +=10;
-        }
-        if (questionTwo===+10){
-            score +=10;
 
-        }
-        if (questionThree===+10){
-            score +=10;
-        }
-        if (questionFour===+10){
-            score +=10;
-        }
+    //JavaScript business logic(back-end)
+var answers = ["C", "A", "B", "A"],
+tot = answers.length;
 
-    
-        $("#display").text("Your score is:" + result);
-    
-        event.preventDefault();
-        $(".final").show();
-    
+function getCheckedValue(radioName) {
+var radios = document.getElementsByName(radioName); // Get radio group by-name
+for (var y = 0; y < radios.length; y++)
+    if (radios[y].checked)
+        return radios[y].value;
+// return the checked value
+
+}
+
+function getScore() {
+var score = 0;
+for (var i = 0; i < tot; i++)
+    if (getCheckedValue("question" + i) === answers[i])
+        score += 5; // increment only
+return score;
+
+}
+//user interface logic(front-end)
+$(document).ready(function () {
+$("form").submit(function (event) {
+    var answers = [];
+    $("#result").text("your score is " + getScore(answers));
+    $("#story").show();
+    event.preventDefault();
+});
+$("#score").click(function () {
+    $("#result").toggle();
+$("#submit").click(function () {
+        $("#quiz").slidetoggle();
+
+});
+});
