@@ -1,5 +1,5 @@
 var testResults = function(one, two ,three,four){
-    return one + two + three+four;
+    return one + two + three+ four;
     
     
     }
@@ -15,7 +15,7 @@ var testResults = function(one, two ,three,four){
         var Q3 = parseInt($("input:radio[name=question3]:checked").val());
         var Q4 = parseInt($("input:radio[name=question4]:checked").val());
     
-        var result = testResults(Q1, Q2 ,Q3);
+        var result = testResults(Q1, Q2 ,Q3,Q4);
     
         $("#display").text("Your score is:" + result);
     
