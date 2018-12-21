@@ -10,7 +10,7 @@ if(question1=="forEach")
 {
   marks=marks+10;
   }
-if(question2=="toUppercase")
+if(question2=="toUpperCase")
 {
   marks=marks+10;
   }
@@ -18,7 +18,7 @@ if(question3=="concat")
 {
   marks=marks+10;
 }
-if(q4=="Camelcase")
+if(question4=="window.print")
 {
   marks=marks+10;
 }
