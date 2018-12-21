@@ -1,8 +1,12 @@
 .data{
-    color:blue;
+    background-color:darkolivegreen;
     text-align: center;
-    font-color:blue;
+    
 }
 .second{
     text-decoration-style: solid
+}
+.jumbotron{
+    background-color:darkolivegreen;
+    text-align: center;
 }
