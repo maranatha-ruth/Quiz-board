@@ -28,6 +28,7 @@ $("form").submit(function (event) {
     $("#story").show();
     event.preventDefault();
 });
+});
 $("#score").click(function () {
     $("#result").toggle();
 $("#submit").click(function () {

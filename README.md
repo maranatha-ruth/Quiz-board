@@ -20,9 +20,3 @@ script
 ```
 MT copyright 2018
 ```
-### BDD 
-```
-| input      | output        | behaviour   |
-| :---         |     :---:      |          ---: |
-|  toUpperCase,toUpper      | git status     | git status    |
-| git diff     | git diff       | git diff      |
