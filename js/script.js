@@ -14,6 +14,7 @@ for (var y = 0; y < radios.length; y++)
 
 function getScore() {
 var score = 0;
+
 for (var i = 0; i < tot; i++)
     if (getCheckedValue("question" + i) === answers[i])
         score += 5; // increment only
@@ -29,10 +30,14 @@ $("form").submit(function (event) {
     event.preventDefault();
 });
 });
-$("#score").click(function () {
-    $("#result").toggle();
-$("#submit").click(function () {
-        $("#quiz").slidetoggle();
+$("#submit").click(function(){
+    $("#quiz").toggle();
+    $("#result").slidetoggle();
+    $("#score").show();
+});
+// $("#score").click(function () {
+//     $("#result").toggle();
+//     $("#quiz").slidetoggle();
+//     $("#score").toggle();
+// });
 
-});
-});
